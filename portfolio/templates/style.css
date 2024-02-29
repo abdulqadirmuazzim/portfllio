@@ -20,14 +20,13 @@ header {
     position: fixed;
     top: 0px;
     z-index: 10;
-    transition: all 0.4s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 /* When I scroll up */
 
 .scroll-up {
-    top: 0px;
-    background: linear-gradient(to right, #999999, #4db8ff 90%);
+    background-color: #999999;
 }
 
 
@@ -167,6 +166,15 @@ label:active:after {
     width: 100%;
     transition: bottom 0.2s ease-in-out;
     position: relative;
+}
+
+/* Backgound picture */
+.container img {
+    /* height: 100%; */
+    width: 100%;
+    z-index: -100;
+    display: block;
+    position: absolute;
 }
 
 .page {
