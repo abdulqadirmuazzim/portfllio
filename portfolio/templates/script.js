@@ -1,3 +1,5 @@
+// Bismillah
+// When the checkbox is clicked/checked
 const checkbox = document.getElementById('toggle');
 
 checkbox.addEventListener('change', function () {
@@ -6,12 +8,39 @@ checkbox.addEventListener('change', function () {
     console.log(isChecked)
 
     // Change background color of body
-    document.body.style.background = isChecked ? 'linear-gradient(45deg, #00264d, #000)' : ''
+    // document.body.style.background = isChecked ? 'linear-gradient(45deg, #00264d, #000)' : ''
 
-    // Change background color of other elements
-    const content = document.querySelector('.container');
-    content.style.background = isChecked ? 'transparent' : '';
-    content.style.border = isChecked ? ".5px solid #fff" : ''
-    content.style.borderRadius = isChecked ? "10px" : ''
+    // Change text color
+    const head = document.querySelector("h2")
+    head.style.color = isChecked ? "#fff" : ""
+
+    const links = document.querySelectorAll("a")
+    links.forEach(element => {
+        element.style.color = isChecked ? "#fff" : ""
+    });
+
+    // Change background color of container elements
+    const content = document.querySelectorAll('.container');
+    content.forEach(element => {
+        element.style.background = isChecked ? 'linear-gradient(45deg, #00264d, #000)' : '';
+        element.style.border = isChecked ? ".5px solid #fff" : ''
+        element.style.borderRadius = isChecked ? "10px" : ''
+    })
+
 
 })
+// Header scrolling effect
+
+const value = 0
+const header = document.getElementById("head")
+
+window.addEventListener("scroll", () => {
+    if (window.scrollY > value) {
+        // Scrolling down
+        header.classList.add("scroll-up");
+    } else {
+        // Scrolling up
+        header.classList.remove("scroll-up");
+    }
+
+});

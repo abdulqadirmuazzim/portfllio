@@ -11,14 +11,25 @@ body {
 header {
     padding: 0;
     margin: 0;
-    background: linear-gradient(to right, lavender 60%, #80aaff);
+    /* background: linear-gradient(to right, lavender 60%, #80aaff); */
+    background-color: transparent;
     display: flex;
+    width: 100%;
     justify-content: space-around;
     align-items: center;
-    position: sticky;
-    top: 0;
+    position: fixed;
+    top: 0px;
     z-index: 10;
+    transition: all 0.4s ease-in-out;
 }
+
+/* When I scroll up */
+
+.scroll-up {
+    top: 0px;
+    background: linear-gradient(to right, #999999, #4db8ff 90%);
+}
+
 
 header h2 {
     color: black;
@@ -109,7 +120,7 @@ label {
 }
 
 label:after {
-    content: '*';
+    content: '';
     position: absolute;
     top: 2.06px;
     left: 3px;
@@ -126,9 +137,12 @@ input:checked+label {
 }
 
 input:checked+label:after {
+    content: '';
     left: calc(100% - 3px);
+    position: absolute;
     transform: translateX(-100%);
-    content: 'c';
+    width: 20px;
+    /* height: auto; */
     background: linear-gradient(#44cdfb, #002cb0);
 }
 
@@ -151,6 +165,7 @@ label:active:after {
     height: 100vh;
     padding: 0;
     width: 100%;
+    transition: bottom 0.2s ease-in-out;
     position: relative;
 }
 
