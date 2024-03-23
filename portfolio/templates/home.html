@@ -11,11 +11,14 @@
 <body>
     <div class="overall">
         <header id="head">
-            <h2>Abdulqadir Mahmood</h2>
+
+            <img id="logo" src="static/lighting.jpg" alt="LOGO">
+            <h2>My Portfolio</h2>
             <div class="tgl">
                 <input type="checkbox" id="toggle"><label for="toggle"></label></input>
                 <!-- <img src="static/day.png" alt="light mode">
                 <img src="static/night.png" alt="dark mode"> -->
+
             </div>
             <nav>
                 <ul>
@@ -29,10 +32,17 @@
         </header>
         <!-- home section -->
         <section id="home">
-            <img src="static/home.png" alt="backgound pic">
             <div class="container">
-                <div class="page">
+                <img src="static/home.png" alt="backgound pic">
+                <!-- <div class="page">
                     <h1>light<br>60% lavender 30% blue 10% darkgrey</h1>
+                </div> -->
+                <div class="cover">
+
+                </div>
+                <div class="text">
+                    <span>My name is </span>
+                    <span>Abdulqadir Mahmood</span>
                 </div>
             </div>
         </section>
@@ -61,8 +71,13 @@
         <!-- Contact section  -->
         <section id="contact">
             <div class="container">
-                <div class="page">
-                    <h1>Welcome, lets explore possiblities</h1>
+                <div class="wrap">
+                    <div class="inp_fields">
+                        <input type="text" placeholder="Name" id="name">
+                        <input type="email" placeholder="ُEmail" id="email">
+                        <input type="text" id="message">
+                        <button id="submit">Send</button>
+                    </div>
                 </div>
             </div>
         </section>

@@ -10,7 +10,7 @@ checkbox.addEventListener('change', function () {
     // Change background color of body
     // document.body.style.background = isChecked ? 'linear-gradient(45deg, #00264d, #000)' : ''
 
-    // Change text color
+    // Change text & color of heading
     const head = document.querySelector("h2")
     head.style.color = isChecked ? "#fff" : ""
 
@@ -42,5 +42,7 @@ window.addEventListener("scroll", () => {
         // Scrolling up
         header.classList.remove("scroll-up");
     }
+
+
 
 });
