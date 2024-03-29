@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     transition: all 0.3s;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* -----HEADER AND NAVIGATION----- */
@@ -26,8 +27,9 @@ header {
 /* When I scroll up */
 
 .scroll-up {
-    background-color: #686d6f;
-    color: #000000;
+
+    background-color: #000000;
+
 }
 
 
@@ -77,18 +79,19 @@ nav ul li {
 
 
 nav ul li a:hover {
-    padding: 5px;
-    background-color: darkgrey;
+
+    border-bottom: 3px solid #d8d4e9;
     border-radius: 5px;
-    color: white;
-    box-shadow: 0px 0px 10px #4080bf;
+    color: lavender;
     transition: all 0.3s;
+    text-shadow: 0px 0px 10px #d8d4e9;
 }
 
 nav ul li a {
     text-decoration: none;
     color: lavender;
     font-weight: 300;
+    padding: 10px;
     transition: all 0.3s;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -171,32 +174,57 @@ label:active:after {
 /* END OF TOGGLE */
 
 /* ----MAIN BODY---- */
+.overall {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px;
+
+}
+
+p {
+    margin: 16px;
+}
 
 .container {
-    background: lavender;
     height: 100vh;
     padding: 0;
     width: 100%;
     transition: bottom 0.2s ease-in-out;
+    background-color: lavender;
     position: relative;
 }
 
+#first {
+    background: linear-gradient(to right, black, transparent);
+
+}
+
 /* Backgound picture */
-.container img {
+img {
     height: 100%;
     width: 100%;
-    /* z-index: -100; */
-    display: block;
+}
+
+#background {
+
+    z-index: -1;
     position: absolute;
 }
 
-.cover {
-    display: block;
-    height: 100%;
-    background: linear-gradient(to left, #fff, transparent);
+.im_cov {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    transform: translateZ(-10px) scale(2.2);
+    z-index: -1;
+    /* background-color: #000000; */
+}
+
+#par {
     position: absolute;
-    opacity: .6;
-    z-index: 100;
+    width: 100%;
+    height: 100vh;
 }
 
 .text {
@@ -207,20 +235,22 @@ label:active:after {
     font-weight: 900;
     padding: 20px;
     margin: 0px 10px;
-    color: #ffffff;
+    color: #c2bdbd;
     opacity: 1;
     position: relative;
 }
 
 .page {
-    position: absolute;
-    width: 45%;
-    height: 25%;
-    top: 25%;
-    left: 25%;
-    box-shadow: 0px 0px 10px black;
-    background: #80aaff;
+    width: 100%;
+    overflow: hidden;
+    color: #1d1f30;
+    position: relative;
+    background-color: #d8d4e9;
+    font-size: 27px;
+    font-weight: 200;
 }
+
+
 
 /* CONTACT PAGE */
 
@@ -232,6 +262,10 @@ label:active:after {
     right: 0;
     justify-content: end;
     align-items: center;
+}
+
+form {
+    display: flexbox;
 }
 
 .inp_fields {

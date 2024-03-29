@@ -38,7 +38,8 @@ window.addEventListener("scroll", () => {
     if (window.scrollY > value) {
         // Scrolling down
         header.classList.add("scroll-up");
-    } else {
+    }
+    else {
         // Scrolling up
         header.classList.remove("scroll-up");
     }
