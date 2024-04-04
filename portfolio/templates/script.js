@@ -31,7 +31,7 @@ checkbox.addEventListener('change', function () {
 })
 // Header scrolling effect
 
-const value = 0
+let value = 0
 const header = document.getElementById("head")
 
 window.addEventListener("scroll", () => {
@@ -43,7 +43,5 @@ window.addEventListener("scroll", () => {
         // Scrolling up
         header.classList.remove("scroll-up");
     }
-
-
-
+    value = window.scrollY
 });
