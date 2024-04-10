@@ -8,6 +8,8 @@
     <title>Document</title>
     <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
     <script src="scrollreveal.js"></script>
+    <script src="typed.js"></script>
+    <!-- <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> -->
 </head>
 
 <body>
@@ -38,43 +40,74 @@
         <!-- home section -->
         <section id="home">
             <div class="container" id="first">
-                <img id="background" src="static/dayback.png" alt="backgound pic">
-                <!-- <div class="page">
-                    <h1>light<br>60% lavender 30% blue 10% darkgrey</h1>
-                </div> -->
-                <div class="cover">
-
-                </div>
+                <!-- <div class="cover"></div> -->
+                <video id="background" src="static/white.mp4" autoplay loop muted></video>
+                <!-- </div> -->
                 <div class="text">
-                    <span>My name is </span>
-                    <span>Abdulqadir Mahmood</span>
+                    <span id="intro">I'm Abdulqadir Mahmood</span>
+                    <span class="typed"></span>
                 </div>
             </div>
         </section>
 
         <!-- About section -->
         <section id="about">
-            <div class="container">
-                <div class="page" id="page1">
-                    <h1 class="header1">Dark <br> black blue white</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iure deserunt ipsam, obcaecati ad
-                        eveniet autem illo, doloremque, alias omnis praesentium consequatur ipsum? Sit consectetur,
-                        laborum enim magni minima asperiores incidunt explicabo maiores eaque ratione nostrum cum iure
-                        quisquam dolorem facere molestiae neque quidem quam fugiat blanditiis vel. Debitis nostrum at
-                        laudantium inventore nisi dolorem accusantium, recusandae aspernatur vero minima necessitatibus
-                        maxime, eum temporibus laboriosam dolorum, consequatur fuga provident maiores delectus assumenda
-                        reprehenderit? Illo, aperiam fugit illum aut impedit ipsa dolor quam quibusdam nesciunt quasi
-                        consequatur veniam officia architecto possimus facere voluptas quos ipsum nam atque modi nobis
-                        sunt adipisci iste? Nisi atque laboriosam ipsa illo ducimus. Ipsum totam perspiciatis esse
-                        voluptatem! Qui labore quis officiis perferendis. Amet, ducimus. Eveniet autem soluta impedit
-                        voluptas itaque fuga ea aliquam! Quia ipsam aspernatur laboriosam earum delectus, mollitia
-                        itaque non assumenda accusamus corporis obcaecati animi amet minus saepe in laborum asperiores
-                        provident cum esse distinctio expedita id harum. Blanditiis nisi harum, praesentium, delectus
-                        sapiente expedita possimus beatae velit quos, impedit sint? Ipsum nulla obcaecati illo animi vel
-                        omnis eveniet, magni neque perferendis aliquid aperiam provident excepturi commodi, cupiditate
-                        et ipsam quidem nostrum mollitia unde, quibusdam blanditiis. Illo, autem amet temporibus tenetur
-                        quasi totam?</p>
+            <div class="container about">
+                <div class="description">
+                    <h1>About me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia adipisci eos
+                        voluptatibus,
+                        accusantium maxime illo dolorum debitis quidem vel tenetur vitae labore commodi quasi odit natus
+                        nam necessitatibus quis dolore nesciunt, id neque, ea inventore. Perferendis vitae rem eos saepe
+                        placeat mollitia nemo nobis modi quas quis, enim ea animi consequatur magnam magni totam quod
+                        odit deleniti provident officiis amet vel impedit minus. Cum aliquid eius accusantium? Magnam
+                        consectetur commodi dolor ab aut obcaecati optio doloremque placeat unde nihil, ut, quasi
+                        excepturi dolore! Itaque fugiat, nemo blanditiis ex aliquam quis omnis quam. Unde exercitationem
+                        nesciunt voluptates quia beatae neque blanditiis molestiae. Dolore modi sunt eligendi vitae
+                        earum aspernatur et quasi laudantium veritatis ratione officia maiores enim nam asperiores harum
+                        recusandae, accusamus sit iusto hic nulla distinctio vel quaerat? Voluptatibus tempora quos quo
+                        recusandae ut at illum, nisi minus doloremque corrupti odit ipsum magnam? Ea, atque sapiente
+                        architecto nemo adipisci eum?</p>
+
                 </div>
+                <div class="image">
+                    <img src="static/me2.png" alt="picture">
+                </div>
+
+            </div>
+            <div class="skills">
+                <span>python</span>
+                <p>85%</p>
+                <div class="progress-bar" role="progressbar">
+                    <div class="progress" style="width: 85%;">
+                        <div class="pro"></div>
+                    </div>
+                </div>
+                <span>javascript</span>
+                <p>60%</p>
+                <div class="progress-bar" role="progressbar">
+                    <div class="progress" style="width: 60%;">
+                        <div class="pro"></div>
+                    </div>
+                </div>
+
+
+                <span>html</span>
+                <p>75%</p>
+                <div class="progress-bar" role="progressbar">
+                    <div class="progress" style="width: 75%;">
+                        <div class="pro"></div>
+                    </div>
+                </div>
+
+                <span>css</span>
+                <p>70%</p>
+                <div class="progress-bar" role="progressbar">
+                    <div class="progress" style="width: 70%;">
+                        <div class="pro"></div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -122,15 +155,22 @@
         <script type="text/javascript" src="./script.js"></script>
     </div>
     <script>
+        // Typing animation
+        var typed = new Typed(".typed", {
+            strings: ["Web developer", "Freelancer", "Data scientist"],
+            typeSpeed: 50,
+            backSpeed: 100,
+            loop: true
+        })
         ScrollReveal({
             reset: false,
-            distance: "60px",
+            distance: "80px",
             duration: 2500,
             delay: 200
         })
-        ScrollReveal().reveal('.text, .header1', { delay: 400, origin: 'left' })
-        ScrollReveal().reveal('p, #submit', { delay: 600, origin: 'bottom' })
-        ScrollReveal().reveal('#name, #email, #message', { delay: 600, origin: 'right', interval: 200 })
+        ScrollReveal().reveal('.text', { delay: 400, origin: 'left' })
+        ScrollReveal().reveal('.description, .skills', { delay: 300, origin: 'bottom' })
+        ScrollReveal().reveal('.image', { delay: 400, origin: 'right' })
 
     </script>
 </body>

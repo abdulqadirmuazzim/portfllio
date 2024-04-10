@@ -165,18 +165,12 @@ label:active:after {
     width: 40px;
 }
 
-/* input:checked {
-    nav {
-        background: #000000;
-    }
-} */
-
 /* END OF TOGGLE */
 
 /* ----MAIN BODY---- */
 .overall {
     overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
     perspective: 10px;
 
 }
@@ -184,20 +178,24 @@ label:active:after {
 /* height 100vh is giving me a problem */
 p {
     margin: 16px;
+    font-size: 25px;
+
+    font-weight: 100;
+    color: #1d1f30;
 }
 
-.container {
+/* .container {
     height: 100vh;
     padding: 0;
     width: 100%;
-    transition: bottom 0.2s ease-in-out;
     background-color: lavender;
     position: relative;
-}
+} */
 
+/* HOME PAGE */
 #first {
     background: linear-gradient(to right, black, transparent);
-
+    height: 100vh;
 }
 
 /* Backgound picture */
@@ -206,11 +204,170 @@ img {
     width: 100%;
 }
 
-#background {
+.cover {
+    z-index: -10;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
 
+#background {
     z-index: -1;
     position: absolute;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
 }
+
+#intro {
+    width: 100%;
+}
+
+.text span {
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+
+.text .typed {
+    font-size: 50px;
+    display: inline;
+    font-weight: 900;
+}
+
+.text {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    top: 150px;
+    padding: 20px;
+    margin: 0px 10px;
+    color: #c2bdbd;
+    opacity: 1;
+    position: relative;
+}
+
+/* END OF HOME */
+
+
+/* ABOUT PAGE */
+#about {
+    background: lavender;
+
+}
+
+.about {
+    position: relative;
+    height: 100vh;
+    margin: 0px;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.description {
+    background-color: #c0cad0;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.description p {
+    font-size: 20px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.description h1 {
+    font-size: 40px;
+    color: #1a1a1a;
+}
+
+.image {
+    width: 450px;
+    height: 450px;
+    /* background-color: #283c40; */
+    box-sizing: border-box;
+    border-radius: 225px;
+    overflow: hidden;
+    margin-left: 20px;
+    box-shadow: inset 0px 0px 10px black;
+    /* back */
+}
+
+.skills {
+    height: 500px;
+    width: 700px;
+    background: lavender;
+    margin: 30px;
+    padding: 10px;
+}
+
+.skills span {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1d1f30;
+
+}
+
+.skills p {
+    font-size: 15px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.progress-bar {
+    height: .5rem;
+    width: 100%;
+    background-color: #c1cff7;
+    margin-bottom: 10px;
+}
+
+.progress {
+    height: 100%;
+}
+
+.pro {
+    width: 0%;
+    height: 100%;
+    background: #1d4bd6;
+    /* animation: progress 2.5s 1; */
+}
+
+/* @keyframes progress {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+} */
+
+/* .container::before,
+.container::after {
+    content: "";
+    display: table;
+}
+
+.container::after {
+    clear: both;
+} */
+
+/* .about {
+} */
+
+/* CONTACT PAGE */
+
+#par {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
 
 .im_cov {
     width: 100%;
@@ -222,24 +379,6 @@ img {
     /* background-color: #000000; */
 }
 
-#par {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-}
-
-.text {
-    display: grid;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    top: 150px;
-    font-size: 50px;
-    font-weight: 900;
-    padding: 20px;
-    margin: 0px 10px;
-    color: #c2bdbd;
-    opacity: 1;
-    position: relative;
-}
 
 .page {
     width: 100%;
@@ -250,10 +389,6 @@ img {
     font-size: 27px;
     font-weight: 200;
 }
-
-
-
-/* CONTACT PAGE */
 
 .wrap {
     display: grid;
