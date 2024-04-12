@@ -7,12 +7,9 @@ checkbox.addEventListener('change', function () {
     const isChecked = checkbox.checked;
     console.log(isChecked)
 
-    // Change background color of body
-    // document.body.style.background = isChecked ? 'linear-gradient(45deg, #00264d, #000)' : ''
-
     // Change text & color of heading
-    const head = document.querySelector("h2")
-    head.style.color = isChecked ? "#000000" : ""
+    const head = document.querySelector("#head h2")
+    head.style.color = isChecked ? "#fff" : ""
 
     const links = document.querySelectorAll("a")
     links.forEach(element => {
@@ -20,8 +17,30 @@ checkbox.addEventListener('change', function () {
     });
 
     // Change background of home
-    const back_home = document.getElementById('backgound')
-    back_home.src = isChecked ? 'static/black.mp4' : ''
+    const back_home = document.getElementById('background')
+    back_home.src = isChecked ? './static/black.mp4' : './static/white.mp4'
+
+    var text = document.querySelectorAll('span')
+
+    text.forEach(element => {
+        element.style.color = isChecked ? 'lavender' : ''
+    })
+
+    var bar = document.querySelectorAll('.pro')
+
+    bar.forEach(element => {
+        element.style.background = isChecked ? '#1ad1ff' : ''
+    })
+
+    var outerbar = document.querySelectorAll('.progress-bar')
+
+    outerbar.forEach(element => {
+        element.style.background = isChecked ? '#49526b' : ''
+    })
+
+    // about
+    var body = document.getElementById("about")
+    body.style.backgroundColor = isChecked ? "#2b2b2b" : ''
 
 
 })
@@ -29,6 +48,7 @@ checkbox.addEventListener('change', function () {
 
 let value = 0
 const header = document.getElementById("head")
+var headclass2 = document.querySelector('.colorit')
 
 window.addEventListener("scroll", () => {
     if (window.scrollY > value) {
@@ -39,10 +59,19 @@ window.addEventListener("scroll", () => {
         // Scrolling up
         header.classList.remove("scroll-up");
     }
+    // if we scroll down
+    if (window.scrollY != 0) {
+        // header.classList.add('colorit')
+        headclass2.style.background = 'gray'
+        // if we scroll to the top
+    } else {
+
+        headclass2.style.background = 'transparent'
+    }
     value = window.scrollY
 });
 
-// animate on scroll effect for porgress bar
+// ANIMATE ON SCROLL FOR PROGRESS BAR
 
 // skills div
 const skills = document.querySelector(".skills")
