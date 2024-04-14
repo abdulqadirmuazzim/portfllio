@@ -26,6 +26,12 @@ checkbox.addEventListener('change', function () {
         element.style.color = isChecked ? 'lavender' : ''
     })
 
+    var text2 = document.querySelectorAll('.percent')
+
+    text2.forEach(element => {
+        element.style.color = isChecked ? 'lavender' : ''
+    })
+
     var bar = document.querySelectorAll('.pro')
 
     bar.forEach(element => {
@@ -40,8 +46,32 @@ checkbox.addEventListener('change', function () {
 
     // about
     var body = document.getElementById("about")
-    body.style.backgroundColor = isChecked ? "#2b2b2b" : ''
+    body.style.backgroundColor = isChecked ? "#161616" : ''
 
+
+    var works = document.getElementById("works")
+    works.style.backgroundColor = isChecked ? "#161616" : ''
+
+
+    var page = document.querySelector(".page")
+    page.style.backgroundColor = isChecked ? "#2b2b2b" : ''
+
+
+    var title = document.querySelector(".header1")
+    title.style.color = isChecked ? "#ffffb3" : ''
+
+
+    var swiper = document.querySelectorAll('swiper-slide')
+
+    swiper.forEach(element => {
+        // element.style.background = isChecked ? '#49526b' : ''
+        if (isChecked) {
+            element.addEventListener('mouseenter', () => { element.classList.add('text_shadow') })
+            element.addEventListener('mouseleave', () => { element.classList.remove('text_shadow') })
+        } else {
+            element.classList.remove("text_shadow")
+        }
+    })
 
 })
 // Header scrolling effect
@@ -99,3 +129,30 @@ window.addEventListener("scroll", () => {
         })
     }
 })
+
+// SLIDER ANIMATION
+const swiperEl = document.querySelector('swiper-container');
+
+const params = {
+    centeredSlides: false,
+    slidesPerGroupSkip: 1,
+    grabCursor: true,
+    keyboard: {
+        enabled: true,
+    },
+    breakpoints: {
+        769: {
+            slidesPerView: 3,
+            slidesPerGroup: 1,
+        },
+    },
+    scrollbar: false,
+    navigation: true,
+    pagination: {
+        clickable: true,
+    },
+};
+
+Object.assign(swiperEl, params)
+
+swiperEl.initialize();

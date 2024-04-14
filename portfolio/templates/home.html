@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/swiper-bundle.css">
     <title>Document</title>
     <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
     <script src="scrollreveal.js"></script>
     <script src="typed.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <!-- <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> -->
 </head>
 
@@ -77,14 +79,14 @@
             </div>
             <div class="skills">
                 <span>python</span>
-                <p>85%</p>
+                <p class="percent">85%</p>
                 <div class="progress-bar" role="progressbar">
                     <div class="progress" style="width: 85%;">
                         <div class="pro"></div>
                     </div>
                 </div>
                 <span>javascript</span>
-                <p>60%</p>
+                <p class="percent">60%</p>
                 <div class="progress-bar" role="progressbar">
                     <div class="progress" style="width: 60%;">
                         <div class="pro"></div>
@@ -93,7 +95,7 @@
 
 
                 <span>html</span>
-                <p>75%</p>
+                <p class="percent">75%</p>
                 <div class="progress-bar" role="progressbar">
                     <div class="progress" style="width: 75%;">
                         <div class="pro"></div>
@@ -101,7 +103,7 @@
                 </div>
 
                 <span>css</span>
-                <p>70%</p>
+                <p class="percent">70%</p>
                 <div class="progress-bar" role="progressbar">
                     <div class="progress" style="width: 70%;">
                         <div class="pro"></div>
@@ -119,19 +121,16 @@
         <section id="works">
             <div class="container">
                 <div class="page">
-                    <h1 class="header1">Welcome, lets explore possiblities</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dicta dolores, iste rerum nostrum
-                        quos adipisci amet pariatur, aliquam est sapiente id velit modi cumque ipsam quasi deleniti
-                        necessitatibus numquam iusto sit, quam quaerat fugit? Ea, optio tempora labore debitis sunt
-                        provident ratione explicabo iste excepturi enim nobis possimus itaque fugiat blanditiis
-                        perspiciatis quia! Saepe molestiae impedit quisquam ab aperiam. Quam harum et magnam similique
-                        nam, modi architecto temporibus, optio corrupti expedita illo quisquam beatae ex. Nesciunt
-                        molestiae officiis fuga adipisci dignissimos quis blanditiis, non sequi sunt ipsam quibusdam
-                        recusandae ab beatae culpa corrupti reprehenderit velit? Voluptate, tempora. Amet, incidunt
-                        autem, deserunt neque labore nemo impedit voluptas accusantium quos ipsa, ullam tempora ratione
-                        error officia at dolor est maiores dolorum illo rem aliquid molestiae ab veniam itaque. Minus,
-                        sit suscipit deserunt ea laborum praesentium voluptates obcaecati iusto officia consectetur sed
-                        quod neque, accusamus perferendis delectus illum reiciendis quam nesciunt. Eligendi?</p>
+                    <h2 class="header1">projects</h2>
+                    <swiper-container class="mySwiper" slides-per-view="3" centered-slides="true" space-between="30"
+                        pagination="true" pagination-type="fraction" navigation="true">
+                        <swiper-slide><a href="">HI</a></swiper-slide>
+                        <swiper-slide><a href="">Salam</a></swiper-slide>
+                        <swiper-slide><a href="">Good</a></swiper-slide>
+                        <swiper-slide><a href=""> What!?</a></swiper-slide>
+                        <swiper-slide><a href="">Nice</a></swiper-slide>
+                    </swiper-container>
+
                 </div>
             </div>
         </section>
@@ -142,7 +141,7 @@
             <div class="container">
                 <div class="wrap">
                     <div class="inp_fields">
-                        <form action="">
+                        <form action="#">
                             <input type="text" placeholder="Name" id="name">
                             <input type="email" placeholder="ُEmail" id="email">
                             <textarea name="message" id="message" cols="30" rows="10"></textarea>
@@ -169,7 +168,8 @@
             delay: 200
         })
         ScrollReveal().reveal('.text', { delay: 400, origin: 'left' })
-        ScrollReveal().reveal('.description, .skills', { delay: 300, origin: 'bottom' })
+        ScrollReveal().reveal('.description, .skills, .header1, .page', { delay: 300, origin: 'bottom' })
+        ScrollReveal().reveal(' swiper-slide', { delay: 500, origin: 'bottom', interval: 200 })
         ScrollReveal().reveal('.image', { delay: 400, origin: 'right' })
 
     </script>
