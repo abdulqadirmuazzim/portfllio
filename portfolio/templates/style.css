@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: linear-gradient(45deg, lavender, lightblue);
     min-height: 100vh;
@@ -169,8 +173,6 @@ label:active:after {
 .overall {
     overflow-x: hidden;
     overflow-y: hidden;
-    perspective: 10px;
-
 }
 
 /* height 100vh is giving me a problem */
@@ -267,9 +269,11 @@ img {
 }
 
 .description {
-    background-color: #c0cad0;
+    background-color: #d7d7d7;
     padding: 10px;
     box-sizing: border-box;
+    border-radius: 30px;
+    border: 1px solid #404040cf;
     width: 50%;
 }
 
@@ -282,6 +286,7 @@ img {
 .description h1 {
     font-size: 40px;
     color: #1a1a1a;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .image {
@@ -298,9 +303,9 @@ img {
 
 .skills {
     height: 500px;
-    width: 700px;
+    width: 620px;
     background: transparent;
-    margin: 30px;
+    margin: 0px 30px;
     padding: 10px;
 }
 
@@ -361,27 +366,27 @@ img {
 
 /* CONTACT PAGE */
 
-#par {
+/* #par {
     position: absolute;
     width: 100%;
     height: 100vh;
-}
+} */
 
 
-.im_cov {
+/* .im_cov {
     width: 100%;
     height: 400px;
     top: -100px;
     position: relative;
     transform: translateZ(-10px) scale(2.2);
     z-index: -1;
-    /* background-color: #000000; */
-}
+    background-color: #000000;
+} */
 
 /* WORKS PAGE */
 #works {
     height: 100vh;
-    background: whitesmoke;
+    background: linear-gradient(240deg, #e4e4e4, #8880ff, #e4e4e4);
     padding: 10px;
 }
 
@@ -428,11 +433,11 @@ swiper-container swiper-slide {
     height: 250px;
     align-items: center;
     top: 100px;
-    transition: 0.5s;
+    transition: 0.3s !important;
 }
 
 swiper-slide:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) !important;
     box-shadow: 0px 0px 50px 5px #242323;
 }
 
@@ -442,54 +447,85 @@ swiper-slide:hover {
 
 swiper-slide a {
     text-decoration: none;
+    color: #1a1a1a;
+    font-size: 30px;
+    font-weight: 600;
 }
 
 /* END OF WORKS */
 
 
 /* CONTACT PAGE */
-.wrap {
-    display: grid;
-    position: relative;
+#contact {
+    height: 100vh;
+}
+
+#contact .container {
     width: 100%;
     height: 100%;
-    right: 0;
-    justify-content: end;
+    background: lavender;
+    display: flex;
+    flex-direction: row-reverse;
     align-items: center;
 }
 
-form {
-    display: flexbox;
-}
-
-.inp_fields {
+.wrap {
     display: grid;
-    width: 400px;
     position: relative;
+    width: 50%;
     right: 0px;
-    margin: 0px 20px;
+    margin: 20px;
     padding: 10px;
     box-sizing: border-box;
 }
+
+.wrap2 {
+    position: relative;
+    width: 50%;
+    left: 0;
+    padding: 20px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.wrap2 h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #1a1a1a;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+}
+
+.wrap2 h4 {
+    font-size: 20px;
+    color: #1a1a1a;
+    font-weight: 300;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 
 #name,
 #email,
 #message {
     width: 100%;
     background: transparent;
-    border: 1px solid black;
+    border: 1px solid #5c5b5b;
     margin: 5px 0px;
 }
 
 #name,
 #email {
     height: 35px;
-    border-radius: 5px;
 }
 
 #message {
     height: 150px;
-    border-radius: 10px;
 }
 
 #submit {
@@ -497,8 +533,58 @@ form {
     width: 100px;
     display: inline-block;
     position: relative;
-    justify-self: center;
 
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 20px;
+    margin: 20px 0px;
+}
+
+.contact i {
+    font-size: 20px;
+    color: #1d1f30;
+    margin-right: 50px;
+}
+
+.icons {
+    width: 100%;
+    height: 20px;
+}
+
+.icons ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.icons ul li {
+    display: inline-block;
+    margin: 15px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.icons ul li i {
+    color: #151515;
+
+}
+
+/* END OF CONTACT PAGE */
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background: #fff;
+    color: #161617;
+    font-size: 20px;
+    font-weight: 200;
 }
 
 /* END OF MAIN BODY */

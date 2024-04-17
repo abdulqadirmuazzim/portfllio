@@ -49,8 +49,20 @@ checkbox.addEventListener('change', function () {
     body.style.backgroundColor = isChecked ? "#161616" : ''
 
 
+    var desc = document.querySelector(".description")
+    desc.style.backgroundColor = isChecked ? "#393939" : ""
+    desc.style.border = isChecked ? "1px solid #fff" : ""
+
+
+    var desch1 = document.querySelector(".description h1")
+    desch1.style.color = isChecked ? "#cccccc" : ""
+
+    var descp = document.querySelector(".description p")
+    descp.style.color = isChecked ? "#fff" : ""
+
+    // works
     var works = document.getElementById("works")
-    works.style.backgroundColor = isChecked ? "#161616" : ''
+    works.style.background = isChecked ? "linear-gradient(240deg, #000000, #737374, #000000)" : ''
 
 
     var page = document.querySelector(".page")
@@ -72,6 +84,33 @@ checkbox.addEventListener('change', function () {
             element.classList.remove("text_shadow")
         }
     })
+    // contact
+    let background = document.querySelector('#contact .container')
+    background.style.background = isChecked ? "#161616" : ""
+
+
+    let wrap2h1 = document.querySelector('.wrap2 h1')
+    wrap2h1.style.color = isChecked ? "#cccccc" : ""
+
+
+    let wrap2h4 = document.querySelector('.wrap2 h4')
+    wrap2h4.style.color = isChecked ? "#fff" : ""
+
+
+    let form = document.querySelectorAll('input, textarea')
+    form.forEach(e => {
+        e.style.color = isChecked ? "#fff" : ''
+        e.style.border = isChecked ? "1px solid #fff" : ''
+    })
+
+    let icons = document.querySelectorAll('i, h4')
+    icons.forEach(e => {
+        e.style.color = isChecked ? "#fff" : ''
+    })
+
+    let footer = document.querySelector('footer')
+    footer.style.background = isChecked ? "#000" : ""
+    footer.style.color = isChecked ? "#cccccc" : ""
 
 })
 // Header scrolling effect
