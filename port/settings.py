@@ -75,13 +75,14 @@ WSGI_APPLICATION = "port.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+import keys
 
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
         "NAME": "sample",
         "USER": "root",
-        "PASSWORD": "mysqlserver",
+        "PASSWORD": keys.sql_password,
         "HOST": "localhost",
         "PORT": "3306",
     }
