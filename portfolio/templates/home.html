@@ -1,15 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="static/swiper-bundle.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'swiper-bundle.css' %}">
+
     <title>Document</title>
     <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
-    <script src="scrollreveal.js"></script>
-    <script src="typed.js"></script>
+    <script src="{% static 'scrollreveal.js' %}"></script>
+    <script src="{% static 'typed.js'%}"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <!-- <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -72,7 +74,8 @@
                         earum aspernatur et quasi laudantium veritatis ratione officia maiores enim nam asperiores harum
                         recusandae, accusamus sit iusto hic nulla distinctio vel quaerat? Voluptatibus tempora quos quo
                         recusandae ut at illum, nisi minus doloremque corrupti odit ipsum magnam? Ea, atque sapiente
-                        architecto nemo adipisci eum?</p>
+                        architecto nemo adipisci eum? <br>
+                    </p>
 
                 </div>
                 <div class="image">
@@ -141,12 +144,25 @@
                 <!-- Item 1 -->
                 <div class="wrap">
 
-                    <form action="#">
-                        <input type="text" class="input-field" placeholder="Name" id="name" required>
-                        <input type="email" class="input-field" placeholder="ُEmail" id="email" required>
-                        <textarea name="message" class="input-field" id="message" cols="30" rows="10"></textarea>
+                    {% if messages %}
+                    {% for message in messages %}
+                    <p class="success"
+                        style=" font-size: 40px; font-weight: 500; font-family: 'Times New Roman' , Times, serif;">
+                        {{message}}
+                    </p>
+                    {%endfor%}
+                    {% else %}
+                    <form method='POST'>
+                        {% csrf_token %}
+                        <input type="text" class="input-field" placeholder="Name" id="name" name='name' required>
+                        <input type="email" class="input-field" placeholder="ُEmail" id="email" name='email' required>
+                        <textarea name="message" class="input-field" id="message" name='message' cols="30" rows="10"
+                            required></textarea>
                         <button id="submit" class="input-field">Send</button>
                     </form>
+
+                    {% endif %}
+
 
                 </div>
                 <!-- Item 2 -->
@@ -176,7 +192,7 @@
                 </div>
             </div>
         </section>
-        <script type="text/javascript" src="./script.js"></script>
+        <script type="text/javascript" src="{% static 'script.js'%}"></script>
         <footer>&copy; 2024 all rights reserved</footer>
     </div>
     <script>

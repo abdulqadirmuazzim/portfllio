@@ -4,4 +4,4 @@ from . import views
 
 # important, django looks for this by default
 
-urlpatterns = [path("", views.home)]
+urlpatterns = [path("", views.home, name="Home")]

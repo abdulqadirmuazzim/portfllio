@@ -89,8 +89,10 @@ checkbox.addEventListener('change', function () {
     background.style.background = isChecked ? "#161616" : ""
 
 
-    let wrap2h1 = document.querySelector('.wrap2 h1')
-    wrap2h1.style.color = isChecked ? "#cccccc" : ""
+    let wrap2h1 = document.querySelectorAll('.wrap2 h1, .success')
+    wrap2h1.forEach(element => {
+        element.style.color = isChecked ? "#cccccc" : ""
+    })
 
 
     let wrap2h4 = document.querySelector('.wrap2 h4')
