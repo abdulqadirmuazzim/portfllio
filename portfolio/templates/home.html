@@ -146,11 +146,13 @@
 
                     {% if messages %}
                     {% for message in messages %}
-                    <p class="success"
+
+                    <p {% if message.tag %} class="{{message.tag}}" {% endif %}
                         style=" font-size: 40px; font-weight: 500; font-family: 'Times New Roman' , Times, serif;">
                         {{message}}
                     </p>
-                    {%endfor%}
+
+                    {% endfor %}
                     {% else %}
                     <form method='POST'>
                         {% csrf_token %}
@@ -160,7 +162,6 @@
                             required></textarea>
                         <button id="submit" class="input-field">Send</button>
                     </form>
-
                     {% endif %}
 
 

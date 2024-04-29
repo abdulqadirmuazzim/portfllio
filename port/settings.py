@@ -75,7 +75,7 @@ WSGI_APPLICATION = "port.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-import keys
+from . import keys
 
 DATABASES = {
     "default": {
